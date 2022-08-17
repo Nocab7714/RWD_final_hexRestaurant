@@ -1,0 +1,263 @@
+// 背景顏色設定
+body{
+    background-color:  $secondary;
+}
+
+// header 設定
+.navbar{
+    
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4)
+    
+}
+
+
+// 漢堡選單
+.showmenu{
+    display: none;
+    .fa-bars{
+        color: white;
+        font-size: 25px;
+    }
+    @include w-md{
+        display: block;
+    }
+}
+
+
+.container{
+
+    max-width: 1024px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 56px;
+    padding: 0 30px;
+
+
+    
+    // 左上角LOGO
+    h1 a{
+        @include replace-text;
+        display: block;
+        height: 24px;
+        width: 120px;
+        background-image:url(../img/logo_w@svg.svg);
+        background-repeat: no-repeat;
+    }
+    // 選單設定
+    .menu{
+        display: flex;
+    
+        li a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 20px 16px;
+            border-bottom: solid transparent 3px;;
+            
+            &:hover{
+                border-bottom: solid white 3px;
+            }
+        }
+
+        // 選單隱藏設定為漢堡選單
+        @include w-md{
+        /*隱藏選單*/
+        max-height: 0px;
+        overflow: hidden;   
+        /*定位選單*/
+        position: absolute;
+        z-index: 100;
+         /*header高度*/
+        top: 50px;     
+        // 選單左右對齊
+        left: 0;
+        right: 0;
+        text-align: center;
+        background-color: rgb(0, 0, 0);
+        transition: max-height 1s;
+        flex-direction: column;
+        
+        }
+        
+    }
+    
+}
+
+.container{
+    @include w-md{
+        max-width: 768px;
+    }
+    @include w-sm{
+        max-width: 576px;
+    }
+}
+
+.menu-show .menu{
+    @include w-md{
+        max-height: 600px;
+    }
+}
+
+// banner 設定
+
+.banner{    
+    height: 420px;
+    width: 100%;
+    
+    background-color: rgb(0, 0, 0);
+    background-image: url(../img/header_desktop.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include w-sm{
+        background-image: url(../img/header_mobile.png);
+    }
+}
+
+.banner-content{
+    color: $secondary;
+    background-color:rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 40px 40px; 
+
+    @include w-ss   {
+        padding: 20px 20px;
+    }
+
+    h2{
+        font-size: $fz-xl;
+        margin-bottom: 20px;
+        line-height: 3rem;
+        @include w-md{
+            span{
+                display: block;
+            }
+        }
+        @include w-ss{
+            font-size: 30px; 
+        }
+    }
+    p{  
+        font-size: $fz-s;
+        line-height: 1.5rem;
+    }
+    
+}
+
+.footer{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.footer-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 40px 15px;
+  
+    @include w-md{
+        flex-direction: column;
+    }
+
+
+}
+
+.footer-content{
+    display: flex;
+    max-width: 600px;
+   
+
+    .about,.contact{
+        width: 50%;
+    }
+
+    .contact{
+        margin-left: 1.2rem;
+    }
+
+    // RWD獨立設定460px，改善聯絡方式li換行出現X軸問題
+    @media(max-width:460px){
+        flex-direction: column;
+        max-width: 600px;
+
+        .about,.contact{
+            width: 100%;
+        }
+        .contact{
+            margin-left: 0rem;
+            margin-top: 2rem;
+        }
+    }
+
+    // 樣式設定
+    h3,p,a{
+        color: $primary;
+    }
+    h3{
+        font-size: $fz-l;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: $fz-s;
+    }
+    li,a{
+        text-decoration: none;
+    }
+
+    ul{
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+
+    @include w-md{
+        margin-top: 2rem;
+        align-items: flex-end;
+    }
+
+    .logo{
+        background-image: url(../img/logo_l@svg.svg);
+        height: 49px;
+        width: 245px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    div{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    .fa-brands{
+            font-size: 36px;
+            margin: 5px;
+    }
+    .fa-square-google-plus{
+        color: #B63926;
+    }
+    .fa-square-twitter{
+        color: #1F7AB3;
+    }
+    .fa-square-facebook{
+        color: #293F75;
+    }
+}

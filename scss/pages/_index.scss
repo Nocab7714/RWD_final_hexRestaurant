@@ -1,0 +1,340 @@
+// feature 區塊設定
+
+.feature{    
+    max-width: 1024px;
+    margin: 0 auto;
+    // border: 2px black solid;
+}
+
+.feature-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    padding: 60px 0;
+
+    h3{
+        text-align: center;
+        font-size: $fz-m;
+        margin-bottom: 40px;
+        line-height: 2rem;
+    }
+
+    // 橫線偽元素設定
+    span{
+        display: block;
+        &::before,&::after{
+            position: absolute;
+            content: '';
+            width: 122px;
+            height: 1px;
+            align-items: center;
+            background-color: $primary;
+        }
+        &::before{
+            left: 25%;
+        }
+        &::after{
+            right: 25%;
+        }
+        
+    }
+    @include w-md{
+        span::before{
+            left: 15%;
+        }
+        span::after{
+            right: 15%;
+        }
+    }
+    @include w-sm{
+        span::before,span::after{
+            background-color: transparent;
+        }
+    }
+}
+
+.feature-container ul{
+    display: flex;
+    
+    li{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 33%;
+        padding: 0px 35px;
+       
+    }
+    @include w-md{
+        flex-direction: column;
+        li{
+            width: 100%;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    li h4{
+        font-size: $fz-m;
+        margin-bottom: 1rem; 
+    }
+
+    li img{
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+}
+
+// chef 區塊設定
+.chef-background{
+    background-color: $primary;
+    
+}
+
+.chef{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    @include w-sm{
+        flex-direction: column;
+    }
+}
+
+.chef-img{
+    background-image: url(../img/main_chef_brown.png);
+    height: 470px;
+    width: 460px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include w-md{
+        // 改善背景圖片過寬出現X軸
+        width: 100%;
+    }
+}
+
+.chef-info{
+    display: flex;
+    flex-direction: column;
+    color: $secondary;
+    padding: 20px 35px;
+    
+    max-width: 410px;
+    h3{
+        font-size: $fz-m;
+    }
+    h4{
+        font-size: $fz-s;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: $fz-s;
+    }
+}
+
+// feedback 區塊設定
+.feedback{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+// feedback區塊 flex 設定
+.feedback-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+
+    .feedback-block{
+        display: flex;
+        width: 100%;
+        li{
+            display: flex;
+            padding: 0px 10px;
+            width: 33%;
+            
+        }
+    }
+
+    @include w-md{
+        .feedback-block{
+            flex-wrap: wrap;
+        }
+        .feedback-block li{
+            width: 50%;
+        }
+        .feedback-block .center{
+            margin-top: 2rem;
+            margin-left: 25%;  
+        }
+    }
+
+    @include w-sm{
+        .feedback-block li{
+            width: 100%;
+        }
+        .feedback-block .center{
+            margin-top: 0;
+            margin-left: 0;  
+        }
+    }
+
+    .feedback-content{
+        display: flex;
+        flex-direction: column;
+    }
+        
+}
+// feedback區塊 圖片、字體、文字設定
+
+.feedback-container{
+    color: $primary;
+    h3{
+        font-size: $fz-l;
+        margin-bottom: 4rem;
+    }
+}
+
+.feedback-block{
+    img{
+        border-radius: 50%;
+        width: 67px;
+        height: 67px;
+        margin-right: 20px;
+    }
+    .feedback-content{
+        h4{
+            font-size: $fz-m;
+            margin: 1rem 0;
+        }
+        p{
+            font-size: $fz-s;
+            margin-bottom: 1rem;
+        }
+        span{
+            font-size: $fz-s;
+            align-self: flex-end;
+            color: rgba(61,17,1,0.75);
+        }
+    }
+}
+
+
+// reserve 區塊設定
+
+.reserve{
+    background-color: rgba(250,250,250,0.70);
+}
+
+.reserve-container{
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+// reserve區塊  flex 設定
+.reserve-container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+
+    h3{
+        align-self: center;
+    }
+
+    .reserve-content{
+        display: flex;
+
+        .reserve-form{
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            justify-content: space-between;
+        }
+        .reserve-form .button{
+            align-self: flex-end;
+        }
+        @include w-sm{
+            .reserve-form{
+                margin-left: 0;
+            }
+        }
+    }
+
+    @include w-sm{
+        .reserve-content{
+            flex-wrap: wrap;
+        }
+    }
+
+
+}
+
+// reserve區塊 圖片、字體、文字設定
+.reserve-container{
+
+    color: $primary;
+
+    h3{
+        font-size: $fz-l;
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+    }
+    .reserve-form{
+        font-size: $fz-s;
+    }
+}
+
+// form 表單設定
+.reserve-form{
+    width: 60%;
+    @include w-sm{
+        width: 100%;
+        margin-top: 30px;
+    }
+    label,input{
+        margin-bottom: 0.5rem;
+    }
+
+    input{
+        height: 32px;
+        padding: 5px;
+    }
+
+    .radio{
+        input{
+            height: 12px
+        }
+        input{
+            margin-right: 30px;
+        }
+        
+    }
+
+}
+
+.button{
+    button{
+        color: white;
+        font-size: $fz-s;
+        padding: 5px 15px;  
+        border: 0px; 
+        border-radius: 3px; 
+        cursor: pointer;     
+    }
+    .button-cancel{
+        background-color: rgba(0,0,0,0.35);
+        &:hover{
+            background-color: rgba(102, 102, 102, 0.35);
+        }
+    }
+    .button-submit{
+        background-color: $waring;
+        &:hover{
+            background-color: #ef9d71;
+        }
+    }
+
+}
+

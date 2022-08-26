@@ -17,6 +17,7 @@
     flex-direction: column;
     padding: 5px 5px 15px 5px; 
     margin: 30px 10px 0px 10px;
+
     h4{
         text-align: center;
         margin: 10px 0;
@@ -31,6 +32,7 @@
         width: 50%;
         padding: 0px 10px;
     }
+
     .register-form{
         width: 50%;
         padding: 0px 10px;
@@ -38,9 +40,11 @@
 
     @include w-sm{
         flex-direction: column;
+
         .term{
             width: 100%;
         }
+
         .register-form{
             width: 100%;
             margin-top: 1.5rem;
@@ -51,21 +55,29 @@
 
 // 偽元素應用-input icon
 .register-form{
+
     input{
         width: 100%; 
         height: 32px;
         text-indent: 1.7rem;
     }
+
     .bottom-1rem{
         margin-bottom: 1rem;
     }
+
     .bottom-05rem{
         margin-bottom: 0.5rem;
+    }
+
+    a{
+        font-size: 14px;
     }
 }
 
 .input-group{
     position:relative;
+
     i { 
         position: absolute; 
         left: 7px;
@@ -75,19 +87,25 @@
 
 // 圖片、文字、樣式設定
 .register-container{
+
     img{
         margin-bottom: 10px;
         max-width: 240px;
     }
 }
 .register-content{
+
     border-top: 4px $waring solid; 
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.15);
     color: $primary;
     font-size: $fz-s;
 
+    h4{
+        font-size: 18px;
+    }
+
     .fa-solid,.fa-regular{
-        color:rgba(61,17,0,0.50);;
+        color:rgba(61,17,0,0.50);
     }
 
     a{
@@ -98,9 +116,11 @@
 
 // 按鈕設定
 .register-button{
+
     margin-top: 20px;
     display: flex;
     justify-content: flex-end;
+
     a{
         display: block;
         color: white;
@@ -109,8 +129,10 @@
         cursor: pointer;
 
     }
+
     .btn-bkg-waring{
         background-color: $waring;
+
         &:hover{
             background-color: #ef9d71;
         }

@@ -39,6 +39,7 @@
     }
 }
 .login-content{
+    
     width: 300px;
     height: 273px;
 
@@ -50,6 +51,10 @@
     color: $primary;
     font-size: $fz-s;
 
+    h4{
+        font-size: 18px;
+    }
+    
     .fa-solid,.fa-regular{
         color:rgba(61,17,0,0.50);;
     }
@@ -57,11 +62,12 @@
     a{
         text-decoration: none;
         color: $waring;
+        font-size: 14px;
     }
 }
 
 
-// 偽元素應用-input icon
+//input icon
 .login-form{
     input{
         width: 100%; 
@@ -86,7 +92,7 @@
         display: block;
         color: white;
         border-radius: 5px;
-        padding: 5px 45px;
+        padding: 5px 49px;
     }
     .btn-register{
         background-color: rgba(0,0,0,0.35);

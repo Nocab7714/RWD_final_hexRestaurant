@@ -1,5 +1,4 @@
 // feature 區塊設定
-
 .feature{    
     max-width: 1024px;
     margin: 0 auto;
@@ -7,7 +6,6 @@
 }
 
 .feature-container{
-
     display: flex;
     flex-direction: column;
     align-items: center ;
@@ -23,6 +21,7 @@
     // 橫線偽元素設定
     span{
         display: block;
+
         &::before,&::after{
             position: absolute;
             content: '';
@@ -32,19 +31,22 @@
             background-color: $primary;
         }
         &::before{
-            left: 25%;
+            left: 20%;
         }
         &::after{
-            right: 25%;
+            right: 20%;
         }
         
     }
     @include w-md{
+        &::before,&::after{
+            width: 80px;
+        }
         span::before{
-            left: 15%;
+            left: 10%;
         }
         span::after{
-            right: 15%;
+            right: 10%;
         }
     }
     @include w-sm{
@@ -72,12 +74,10 @@
             margin-bottom: 2.5rem;
         }
     }
-
     li h4{
         font-size: $fz-m;
         margin-bottom: 1rem; 
     }
-
     li img{
         border-radius: 50%;
         margin-bottom: 2rem;
@@ -87,7 +87,6 @@
 // chef 區塊設定
 .chef-background{
     background-color: $primary;
-    
 }
 
 .chef{
@@ -119,7 +118,6 @@
     flex-direction: column;
     color: $secondary;
     padding: 20px 35px;
-    
     max-width: 410px;
     h3{
         font-size: $fz-m;
@@ -149,11 +147,11 @@
     .feedback-block{
         display: flex;
         width: 100%;
+
         li{
             display: flex;
             padding: 0px 10px;
             width: 33%;
-            
         }
     }
 
@@ -187,7 +185,6 @@
         
 }
 // feedback區塊 圖片、字體、文字設定
-
 .feedback-container{
     color: $primary;
     h3{
@@ -222,7 +219,6 @@
 
 
 // reserve 區塊設定
-
 .reserve{
     background-color: rgba(250,250,250,0.70);
 }
@@ -266,13 +262,10 @@
             flex-wrap: wrap;
         }
     }
-
-
 }
 
 // reserve區塊 圖片、字體、文字設定
 .reserve-container{
-
     color: $primary;
 
     h3{
@@ -289,6 +282,7 @@
 // form 表單設定
 .reserve-form{
     width: 60%;
+
     @include w-sm{
         width: 100%;
         margin-top: 30px;
@@ -296,7 +290,6 @@
     label,input{
         margin-bottom: 0.5rem;
     }
-
     input{
         height: 32px;
         padding: 5px;
@@ -309,9 +302,7 @@
         input{
             margin-right: 30px;
         }
-        
     }
-
 }
 
 .button{
@@ -335,6 +326,5 @@
             background-color: #ef9d71;
         }
     }
-
 }
 

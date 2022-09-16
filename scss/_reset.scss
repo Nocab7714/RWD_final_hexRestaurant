@@ -5,7 +5,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -21,21 +21,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-*,*::before,*::after{
-    box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-// font setting
-body{
-	line-height: 1.5rem;
-	font-family: Microsoft JhengHei;
 }

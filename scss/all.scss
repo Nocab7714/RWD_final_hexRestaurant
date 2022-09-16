@@ -1,9 +1,10 @@
 @import "mixins";
 @import "reset";
+@import "base";
 @import "variable";
 @import "layout";
 // pages
 @import "pages/index";
 @import "pages/login";
 @import "pages/products";
-@import "pages/register";
+@import "pages/register"; 

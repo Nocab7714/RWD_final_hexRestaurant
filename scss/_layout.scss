@@ -33,8 +33,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 56px;
     padding: 0 30px;
+    @include w-md{
+        padding: 11.5px 30px;
+    }
     
     // 左上角LOGO
     h1 a{
@@ -70,8 +72,8 @@ body{
         /*定位選單*/
         position: absolute;
         z-index: 100;
-         /*header高度*/
-        top: 50px;     
+         /*header高度 原設定 50px 修正為 100%*/
+        top: 100%;     
         // 選單左右對齊
         left: 0;
         right: 0;
@@ -92,7 +94,6 @@ body{
 // banner 設定
 .banner{    
     height: 420px;
-    width: 100%;
     background-color: rgb(0, 0, 0);
     background-image: url(../img/header_desktop.png);
     background-repeat:no-repeat;
@@ -119,7 +120,8 @@ body{
     h2{
         font-size: $fz-xl;
         margin-bottom: 20px;
-        line-height: 3rem;
+        // padding: 10px 0px;
+        line-height:3rem;
         @include w-md{
             span{
                 display: block;
@@ -131,7 +133,6 @@ body{
     }
     p{  
         font-size: $fz-s;
-        line-height: 1.5rem;
     }
     
 }
